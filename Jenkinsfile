@@ -9,7 +9,6 @@ pipeline {
                 }
             }
         }
-
         stage("Push Docker Image") {
             steps {
                 script {
@@ -20,7 +19,6 @@ pipeline {
                 }
             }
         }
-
         stage("Publish Kubernetes") {
             environment {
                 tag_version="${env.BUILD_ID}"
